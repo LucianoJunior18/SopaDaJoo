@@ -1,458 +1,429 @@
 /* fontes */
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /* Reset */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
-
 body {
-    background-color: #000000;
-    
+  background-color: #000000;
 }
 
 .interface {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 4%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
 .btn-contato button {
-    padding: 10px 40px;
-    background-color: #ffc400;
-    border: none;
-    border-radius: 500px;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: 0.4s;
-    position: relative;
-      z-index: 1; /* O conteúdo fica acima da camada preta */
+  padding: 10px 40px;
+  background-color: #ffc400;
+  border: none;
+  border-radius: 500px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
-.btn-contato button:hover  {
-    background-color: rgb(0, 0, 0);
-    color: #ffc400;
-    transform: scale(1.1);
+.btn-contato button:hover {
+  background-color: rgb(0, 0, 0);
+  color: #ffc400;
+  transform: scale(1.1);
 }
 
 /* Estilo Cabeçalho */
 header {
-    padding: 10px 4%;
-    background-color: #0000003a;
-    width: 100%;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
+  padding: 10px 4%;
+  background-color: #0000003a;
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    transition: .5s;
-    z-index: 9999999;
-
+  transition: 0.5s;
+  z-index: 9999999;
 }
 
 header .interface {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header .logo a img {
-    width: auto;
-    height: 100px;
+  width: auto;
+  height: 100px;
 }
 
 header a {
-    color: #5c5c5c;
-    text-decoration: none;
-    display: inline-block;
-    transition: 0.4s;
+  color: #5c5c5c;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.4s;
 }
 
-
 header nav.menu-desktop ul {
-    list-style: none;
+  list-style: none;
 }
 
 header nav.menu-desktop ul li {
-    display: inline-block;
-    color: #ffc400;
+  display: inline-block;
+  color: #ffc400;
 }
 
 header nav.menu-desktop ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    padding: 0 40px;
-    font-size: 21px;
-    
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0 40px;
+  font-size: 21px;
 }
 
 header nav.menu-desktop ul li a:hover {
-    color: #ffc400;
-    transform: scale(1.2);
+  color: #ffc400;
+  transform: scale(1.2);
 }
 
 /* Estilo do menu dinamico */
 header .logo img.logo-preta {
-    display: none;
+  display: none;
 }
 
-header.rolar img{
-    width: auto;
-    height: 100px;
+header.rolar img {
+  width: auto;
+  height: 100px;
 }
-
 
 header.rolar {
-    background-color:#ffc400;
-    padding: 5px 0;
-    box-shadow: 0 0 8px #000000;
+  background-color: #ffc400;
+  padding: 5px 0;
+  box-shadow: 0 0 8px #000000;
 }
 
 header.rolar .menu-desktop ul li a {
-    color: #000;
+  color: #000;
 }
 
-header.rolar .menu-desktop ul li a:hover{
-    color: #000;
+header.rolar .menu-desktop ul li a:hover {
+  color: #000;
 }
 
-header.rolar .btn-contato button{
-    background-color: #000;
-    color: #ffffff;
+header.rolar .btn-contato button {
+  background-color: #000;
+  color: #ffffff;
 }
 
-header.rolar .btn-contato button:hover{
-    background-color: #000;
-    color: #FFCC00;
+header.rolar .btn-contato button:hover {
+  background-color: #000;
+  color: #ffcc00;
 }
 
-header.rolar .logo .logo-amarela{
-    display: none;
+header.rolar .logo .logo-amarela {
+  display: none;
 }
 
-header.rolar .logo .logo-preta{
-    display: block;
+header.rolar .logo .logo-preta {
+  display: block;
 }
-
 
 /*Estilo do hero   */
 
 section.hero-site {
-    height: 100vh;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0),  rgb(0, 0, 0)), url('img/top-view-vegetable-soup-with-seasonings-dark-green-background-ingredient-soup-meal-food-vegetable.jpg');
-    background-repeat: no-repeat;
-    background-size: cover,100% 100%;
-    background-position: center,center;
-    color: white;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+    url("img/top-view-vegetable-soup-with-seasonings-dark-green-background-ingredient-soup-meal-food-vegetable.jpg");
+  background-repeat: no-repeat;
+  background-size: cover, 100% 100%;
+  background-position: center, center;
+  color: white;
 }
 
-
-
-.hero-site .interface{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.hero-site .interface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .hero-site::before {
-    content: "";
-    position: absolute;
-    top: 100;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente preto */
-    z-index: 0; /* Coloca o pseudo-elemento abaixo do conteúdo principal */
+  content: "";
+  position: absolute;
+  top: 100;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente preto */
+  z-index: 0; /* Coloca o pseudo-elemento abaixo do conteúdo principal */
 }
 
-
-
-
-
-
 .hero-site .txt-hero h1 {
-    font-size: 7rem;
-    font-family:"Funnel Display", sans-serif;
-    width: 600px;
-    margin: 30px auto;
-    position: relative;
-      z-index: 1; /* O conteúdo fica acima da camada preta */
-
+  font-size: 7rem;
+  font-family: "Funnel Display", sans-serif;
+  width: 600px;
+  margin: 30px auto;
+  position: relative;
+  z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
 .hero-site .txt-hero h1 span {
-    color: #ffc400;
+  color: #ffc400;
 }
 
 .hero-site .txt-hero p {
-    font-size: 1.9rem;
-    margin-bottom: 20px;
-    border: transparent;
-    position: relative;
-      z-index: 1; /* O conteúdo fica acima da camada preta */
-    
-
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  border: transparent;
+  position: relative;
+  z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
-
-.hero-site .social-links a img{
-    margin:20px 0;
-    width: 45px;
-    transition: 0.4s;
-    position: relative;
-    z-index: 1; /* O conteúdo fica acima da camada preta */
+.hero-site .social-links a img {
+  margin: 20px 0;
+  width: 45px;
+  transition: 0.4s;
+  position: relative;
+  z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
 .hero-site .social-links a img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .hero-site .txt-imagem-hero img {
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    align-items: center;
-    transition: 0.4s;
-    cursor: pointer;
-    position: relative;
-    z-index: 1; /* O conteúdo fica acima da camada preta */
-    
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
 .hero-site .txt-imagem-hero img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* ESTILO CARDAPIO */
 
 .cardapio {
-    padding: 7rem;
-    height: 100vh;
-    background-color: #7e7e7e;
-    justify-content: center;
-    font-family: "Funnel Display", sans-serif;
-    background: 
-    linear-gradient(to top, rgb(0, 0, 0), transparent),
+  padding: 7rem;
+  height: 100vh;
+  background-color: #7e7e7e;
+  justify-content: center;
+  font-family: "Funnel Display", sans-serif;
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent),
     linear-gradient(to bottom, rgb(0, 0, 0), transparent),
-    url('img/background-cardapio-1.jpg');
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; /* Adicionei o position: relative */
+    url("img/background-cardapio-1.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /* Adicionei o position: relative */
 }
 
 .cardapio::before {
-    content: "";
-    position: absolute;
-    top: 0; /* Posiciona no topo do elemento pai */
-    left: 0;
-    width: 100%;
-    height: 100%; /* Altera para 100% para cobrir o cardapio */
-    background-color: rgba(0, 0, 0, 0); /* Fundo semitransparente preto */
-    z-index: 0; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+  content: "";
+  position: absolute;
+  top: 0; /* Posiciona no topo do elemento pai */
+  left: 0;
+  width: 100%;
+  height: 100%; /* Altera para 100% para cobrir o cardapio */
+  background-color: rgba(0, 0, 0, 0); /* Fundo semitransparente preto */
+  z-index: 0; /* Garante que o pseudo-elemento fique atrás do conteúdo */
 }
 
-
 .cardapio .txt-cardapio h2 {
-    color: #ffd000;
-    text-align: center;
-    font-family:"Funnel Display", sans-serif;
-    font-size: 5rem;
-    letter-spacing: 0.25rem;
-    padding-bottom: 1rem;
-    position: relative;
-    z-index: 1;
-    
+  color: #ffd000;
+  text-align: center;
+  font-family: "Funnel Display", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0.25rem;
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .cardapio .cards-cardapio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-
 .cardapio .card-sopa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 28rem;
-    height: 18rem;
-    background-color: #ffc400;
-    color: #020202;
-    border-radius: 3rem;
-    box-shadow: 0 0.1rem 0.5rem #00000085;
-    cursor: pointer;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28rem;
+  height: 18rem;
+  background-color: #ffc400;
+  color: #020202;
+  border-radius: 3rem;
+  box-shadow: 0 0.1rem 0.5rem #00000085;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .cardapio .card-sopa:hover {
-    box-shadow: 0 0.4rem 1rem #ffc400; 
-    background-color: #ffc400;
+  box-shadow: 0 0.4rem 1rem #ffc400;
+  background-color: #ffc400;
 }
 
-
-
 .cardapio .card-sopa img {
-    object-fit: cover;
-    width: 100%;
-    height: 8rem;
-    border-radius: 3rem 3rem 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 8rem;
+  border-radius: 3rem 3rem 0 0;
 }
 
 .content-card-sopa {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 1rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem 2rem 2rem;
 }
 
 .content-card-sopa h3 {
-    font-size: 1.8rem;
-    margin: 0;
-    letter-spacing: 0.25rem;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  font-weight: 500;
+  color: #000000;
 }
 
 .content-card-sopa p {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    letter-spacing: 0.15rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.15rem;
 }
 
 .price strong {
-    display: flex;
-    justify-content: center;
-    font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2.2rem;
 }
-
 
 .titulo-sobre {
-    color: #ffc400;
-    font-family: "Funnel Display", sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 4rem;
-    padding-bottom: 1.5rem;
+  color: #ffc400;
+  font-family: "Funnel Display", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
 }
 
-
-.caixa-sobre{
-    padding: 12rem;
-    height: 100%;
-    background-color: #7e7e7e;
-    justify-content: center;
-    font-family: sans-serif;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.575),  rgb(0, 0, 0)), url('img/top-view-delicious-vegetable-soup-with-different-seasonings-dark-green-surface-food-vegetable-ingredients-soup-product-meal.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative; /* Adicionei o position: relative */
+.caixa-sobre {
+  padding: 12rem;
+  height: 100%;
+  background-color: #7e7e7e;
+  justify-content: center;
+  font-family: sans-serif;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.575), rgb(0, 0, 0)),
+    url("img/top-view-delicious-vegetable-soup-with-different-seasonings-dark-green-surface-food-vegetable-ingredients-soup-product-meal.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /* Adicionei o position: relative */
 }
-
 
 .caixa-sobre .sobre-container {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-
 .caixa-sobre .sobre-container .sobre-img {
-    flex: 1 1 45rem;
+  flex: 1 1 45rem;
 }
 
 .caixa-sobre .sobre-container .sobre-img img {
-    width: 500px;
-    border-radius: 50px;
+  width: 500px;
+  border-radius: 50px;
 }
 
 .caixa-sobre .sobre-container .sobre.txt {
-    flex: 1 1 45rem;
-    padding: 2rem;
+  flex: 1 1 45rem;
+  padding: 2rem;
 }
 
-
 .caixa-sobre .sobre-container .sobre-txt p {
-    font-size: 1.5rem;
-    font-weight: lighter;
-    color: #ffff;
-    line-height: 1.5;
-    padding: 1rem 0;
-    margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #ffff;
+  line-height: 1.5;
+  padding: 1rem 0;
+  margin-bottom: 20px;
 }
 
 .sobre-link {
-    padding: 10px 40px;
-    background-color: #ffc400;
-    border: none;
-    border-radius: 500px;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    transition: 0.4s;
-    position: relative;
-    z-index: 1; /* O conteúdo fica acima da camada preta */
+  padding: 10px 40px;
+  background-color: #ffc400;
+  border: none;
+  border-radius: 500px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.4s;
+  position: relative;
+  z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
 .sobre-link:hover {
-    background-color: rgb(0, 0, 0);
-    color: #ffc400;
-    transform: scale(1.1);
+  background-color: rgb(0, 0, 0);
+  color: #ffc400;
+  transform: scale(1.1);
 }
 
-
 .modal {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    gap: 20px;
-    position: fixed;
-    z-index: 4;
-    top: 50%;
-    left: -80%;
-    transform: translate(-50%, -50%);
-    transition:  left .5s linear;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 20px;
+  position: fixed;
+  z-index: 4;
+  top: 50%;
+  left: -80%;
+  transform: translate(-50%, -50%);
+  transition: left 0.5s linear;
 }
 
 .modal .titulo {
-    color: #ffffff;
-    font-size: 3rem;
-    font-family: "Funnel Display", sans-serif;
-    text-align: center;
-    padding: 20px;
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Funnel Display", sans-serif;
+  text-align: center;
+  padding: 20px;
 }
 
 .modal .titulo span {
-    color: #ffc400;
+  color: #ffc400;
 }
 
 .mascara {
-    visibility: hidden;
-    z-index: 3;
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.932) 50%, rgba(10, 12, 16, 0.99) 85%);
+  visibility: hidden;
+  z-index: 3;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.932) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
 }
-
