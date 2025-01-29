@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- BOOTSTRAP ICONS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<!-- /BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- /BOOTSTRAP ICONS -->
 
-<!-- script js -->
-<script src="index.js" defer></script>
+    <!-- script js -->
+    <script src="index.js" defer></script>
 
 </head>
+
 <body>
     <header id="header">
         <div class="interface">
@@ -27,9 +29,9 @@
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Cardapio</a></li>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Localização</a></li>
+                    <li><a href="#cardapio">Cardapio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a onclick="mostrarModal()" href="#">Localização</a></li>
                 </ul>
             </nav>
 
@@ -43,42 +45,44 @@
     </header>
 
     <section class="hero-site">
-            
-            <div class="interface">
 
-                <div class="txt-hero">
-                    <h1>Sopa da <span>Jó</span></h1>
+        <div class="interface">
 
-                    <p>A melhor sopa não é apenas uma refeição, é uma experiência que aquece o corpo e reconforta a alma. </p>
+            <div class="txt-hero">
+                <h1>Sopa da <span>Jó</span></h1>
 
-                    <a href="#" class="btn-contato"><button>Comprar</button></a>
+                <p>A melhor sopa não é apenas uma refeição, é uma experiência que aquece o corpo e reconforta a alma.
+                </p>
 
-                    <div class="social-links">
-                        <a href="https://wa.me/SEU_NUMERO" target="_blank">
-                            <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
-                        </a>
-                        <a href="https://www.instagram.com/SEU_PERFIL" target="_blank">
-                            <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram">
-                        </a>
-                    </div>
-                    
+                <a href="#" class="btn-contato"><button>Comprar</button></a>
+
+                <div class="social-links">
+                    <a href="https://wa.me/SEU_NUMERO" target="_blank">
+                        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/SEU_PERFIL" target="_blank">
+                        <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
+                            alt="Instagram">
+                    </a>
                 </div>
-                
-                
-
-                <div class="txt-imagem-hero">
-                    <img src="img/Post para Instagram Sopas e Caldos Restaurante .png" alt="">
-                </div>
-                
-
-                
 
             </div>
+
+
+
+            <div class="txt-imagem-hero">
+                <img src="img/Post para Instagram Sopas e Caldos Restaurante .png" alt="">
+            </div>
+
+
+
+
+        </div>
 
     </section>
 
 
-    <section class="cardapio">
+    <section class="cardapio" id="cardapio">
         <div class="interface">
             <div class="txt-cardapio">
                 <h2>Cardapio</h2>
@@ -90,7 +94,9 @@
 
                     <div class="content-card-sopa">
                         <h3>Carne</h3>
-                        <p>Legumes,Carne,Tempero da casa</p>
+                        <p>Batata, cenoura e mandioca,
+                            Acém desfiado,
+                            Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
                         </p>
@@ -102,7 +108,9 @@
 
                     <div class="content-card-sopa">
                         <h3>Frango</h3>
-                        <p>Legumes,Carne,Tempero da casa</p>
+                        <p>Batata, cenoura e mandioca,
+                            Frango grelhado,
+                            Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
                         </p>
@@ -114,7 +122,9 @@
 
                     <div class="content-card-sopa">
                         <h3>Bacon</h3>
-                        <p>Legumes,Carne,Tempero da casa</p>
+                        <p>Batata, cenoura e cebola,
+                            Bacon crocante,
+                            Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
                         </p>
@@ -125,7 +135,7 @@
                     <img src="img/img-cardapio-bacon.jpg" alt="">
 
                     <div class="content-card-sopa">
-                        <h3>Bacon</h3>
+                        <h3>Calabresa</h3>
                         <p>Legumes,Carne,Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
@@ -133,23 +143,57 @@
                     </div>
                 </div>
 
-                
+
             </div>
 
-            
+
         </div>
     </section>
 
-    <section class="sobre">
-        <div class="interface">
-            <div class="flex">
-                <div class="img-sobre">
-                    <img src="" alt="">
-                </div>
+
+
+    <section class="caixa-sobre" id="sobre">
+        <h2 class="titulo-sobre">Sobre Nós</h2>
+
+        <div class="sobre-container">
+            <div class="sobre-img">
+                <img src="img/cozinheira.webp" alt="">
+            </div>
+
+
+            <div class="sobre-txt">
+
+                <p>Bem-vindo ao Sopa da Jo, onde cada prato é preparado com amor, tradição e aquele toque especial que
+                    só Jo sabe dar. Nosso restaurante nasceu do desejo de trazer para a sua mesa o conforto de uma boa
+                    sopa, como aquelas feitas pelas mãos carinhosas de uma avó ou por um amigo querido em um dia frio.
+
+                    Aqui no Sopa da Jo, acreditamos que comida é mais do que sustento: é uma forma de criar memórias e
+                    reunir pessoas. Nosso cardápio é pensado para todos os gostos e momentos, desde sopas clássicas e
+                    reconfortantes até combinações inovadoras que surpreendem o paladar. Tudo isso feito com
+                    ingredientes frescos, temperos aromáticos e, claro, muito carinho.
+                    Estamos ansiosos para recebê-lo! ❤️</p>
+                <a class="sobre-link" href="#">Comprar</a>
+
             </div>
         </div>
+
     </section>
+
+
+
+    <div class="modal">
+        <h3 class="titulo"><span>Nosso</span> Endereço</h3>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31336.421389285577!2d-37.056429143732394!3d-10.959393840783648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab1f7781c59ab%3A0xa48c9b523142f1c5!2sRei%20da%20Sopa%20-%20Rio!5e0!3m2!1spt-BR!2sbr!4v1738095443189!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+    <div class="mascara" onclick="esconderModal()"></div>
 
 
 </body>
+
 </html>
