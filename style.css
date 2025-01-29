@@ -156,10 +156,10 @@ section.hero-site {
 .hero-site::before {
   content: "";
   position: absolute;
-  top: 100;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente preto */
   z-index: 0; /* Coloca o pseudo-elemento abaixo do conteúdo principal */
 }
