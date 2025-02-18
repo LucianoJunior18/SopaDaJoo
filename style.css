@@ -16,6 +16,7 @@
   display: none;
 }
 
+html,
 body {
   background-color: #000000;
   overflow-x: hidden;
@@ -60,8 +61,8 @@ header {
 
 header .interface {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 header .logo a img {
@@ -78,6 +79,7 @@ header a {
 
 header nav.menu-desktop {
   display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
 header nav.menu-desktop a {
@@ -191,6 +193,7 @@ header.rolar .logo .logo-preta {
 /*Estilo do hero   */
 
 section.hero-site {
+  width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)),
     url("img/top-view-vegetable-soup-with-seasonings-dark-green-background-ingredient-soup-meal-food-vegetable.jpg");
@@ -220,7 +223,7 @@ section.hero-site {
 }
 
 .hero-site .txt-hero h1 {
-  font-size: 6.9rem;
+  font-size: 5vw;
   font-family: "Funnel Display", sans-serif;
   width: 600px;
   margin: 20px auto;
@@ -244,7 +247,6 @@ section.hero-site {
 .hero-site .social-links {
   display: flex;
   align-items: center;
-
   gap: 0.8rem;
 }
 
@@ -334,7 +336,8 @@ section.hero-site {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 90%;
+  max-width: 300%;
+  min-width: 200px;
   width: 25vw;
   height: 38vh;
   background-color: #ffc400;
@@ -641,7 +644,7 @@ footer .line-footer-borda p a {
 @media screen and (max-width: 650px) {
   /* hero */
   .hero-site .txt-hero h1 {
-    font-size: 15vw;
+    font-size: 5vw;
   }
 
   .hero-site .txt-hero p {
