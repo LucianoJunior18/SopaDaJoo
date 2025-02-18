@@ -29,3 +29,13 @@ function esconderModal() {
   modal.style.left = "-80%";
   mascara.style.visibility = "hidden";
 }
+
+// Fechar o menu ao clicar em qualquer link
+const menuLinks = document.querySelectorAll("header nav a");
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // Fecha o menu quando um link for clicado
+    menuIcon.classList.remove("bx-x");
+    navBarMenu.classList.remove("active");
+  });
+});

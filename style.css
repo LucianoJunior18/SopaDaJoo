@@ -9,6 +9,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "poppins", sans-serif;
 }
 
 .btn-mobile {
@@ -121,18 +122,17 @@ header nav.menu-desktop.active a:hover {
 nav.active {
   position: fixed;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.65);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.801);
   backdrop-filter: blur(10px);
-  top: 0%;
+  top: -1;
   left: 0;
-  height: 100vh;
   animation: appearField 1s;
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   padding-top: 0.5rem;
   align-items: center;
-  animation: fade 1s;
 }
 
 /* Estilo do menu dinamico */
@@ -202,7 +202,6 @@ section.hero-site {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   height: 100%;
 }
 
@@ -218,10 +217,10 @@ section.hero-site {
 }
 
 .hero-site .txt-hero h1 {
-  font-size: 7rem;
+  font-size: 6.9rem;
   font-family: "Funnel Display", sans-serif;
   width: 600px;
-  margin: 30px auto;
+  margin: 20px auto;
   position: relative;
   z-index: 1; /* O conteúdo fica acima da camada preta */
 }
@@ -231,23 +230,36 @@ section.hero-site {
 }
 
 .hero-site .txt-hero p {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
+  text-align: left;
   margin-bottom: 20px;
   border: transparent;
   position: relative;
   z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
-.hero-site .social-links a img {
+.hero-site .social-links {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+}
+
+.hero-site .social-links .btn-contato button {
+  text-align: right;
+}
+
+.hero-site .social-links a i {
+  color: #ffc400;
+  font-size: 3.5rem;
   margin: 20px 0;
-  width: 45px;
   transition: 0.4s;
   position: relative;
   z-index: 1; /* O conteúdo fica acima da camada preta */
 }
 
-.hero-site .social-links a img:hover {
-  transform: scale(1.1);
+.hero-site .social-links a i:hover {
+  transform: scale(1.3);
 }
 
 .hero-site .txt-imagem-hero img {
@@ -289,7 +301,7 @@ section.hero-site {
   top: 0; /* Posiciona no topo do elemento pai */
   left: 0;
   width: 100%;
-  height: 100%; /* Altera para 100% para cobrir o cardapio */
+  height: 10vh; /* Altera para 100% para cobrir o cardapio */
   background-color: rgba(0, 0, 0, 0); /* Fundo semitransparente preto */
   z-index: 0; /* Garante que o pseudo-elemento fique atrás do conteúdo */
 }
@@ -319,8 +331,9 @@ section.hero-site {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 28rem;
-  height: 18rem;
+  max-width: 90%;
+  width: 25vw;
+  height: 38vh;
   background-color: #ffc400;
   color: #020202;
   border-radius: 3rem;
@@ -373,6 +386,7 @@ section.hero-site {
 
 /* sobre nos */
 .caixa-sobre {
+  display: flex;
   width: 100%; /* A largura ocupa 100% da largura da viewport */
   min-height: 80%;
   padding: 5rem 5rem 1rem 5rem;
@@ -382,6 +396,14 @@ section.hero-site {
   background-repeat: no-repeat; /* Impede que a imagem se repita */
   background-size: cover; /* Garante que a imagem cubra toda a área */
   position: relative; /* Necessário para usar posicionamento absoluto em elementos internos */
+  padding: 10rem;
+}
+
+.caixa-sobre .interface {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .titulo-sobre {
@@ -390,17 +412,17 @@ section.hero-site {
   font-family: "Funnel Display", sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
-  padding-bottom: 2rem;
 }
 
 .caixa-sobre .sobre-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00000057;
+  background-color: #00000086;
+  border: 2px solid #0000002f;
+  box-shadow: 0 0 1rem #000;
   gap: 1.5rem;
-  flex-wrap: wrap-reverse;
-  width: 80vw;
+  flex-wrap: wrap;
   margin: auto;
   padding: 2rem 5rem 1rem 5rem;
 }
@@ -411,12 +433,12 @@ section.hero-site {
 }
 
 .caixa-sobre .sobre-container .sobre-img img {
-  width: 100%;
+  width: 40vw;
 }
 
 .caixa-sobre .sobre-container .sobre-txt {
   flex: 1 1 20rem;
-  padding: 2rem;
+  padding: 0 1rem 0.5rem 1rem;
   text-align: center;
 }
 
@@ -430,11 +452,11 @@ section.hero-site {
 }
 
 .caixa-sobre .sobre-container .sobre-txt p {
-  font-size: 1.5rem;
-  font-weight: lighter;
+  font-size: 1.4rem;
+  font-weight: 200;
   color: #ffff;
   line-height: 1.8;
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
 }
 
 .modal {
@@ -470,14 +492,50 @@ section.hero-site {
   z-index: 3;
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     109deg,
     rgba(10, 12, 16, 0.99) 15%,
     rgba(10, 12, 16, 0.932) 50%,
     rgba(10, 12, 16, 0.99) 85%
   );
+}
+
+/* rodape */
+footer {
+  background-color: #000000;
+  padding: 5px 0;
+}
+
+.logo-footer a img {
+  width: 100px;
+  height: 100px;
+}
+footer .line-footer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.borda {
+  border-top: 2px solid #ffc400;
+}
+
+footer .line-footer-borda p a {
+  color: #ffc400;
+}
+
+.line-footer .img-social i {
+  color: #ffc400;
+  font-size: 3.5rem;
+  transition: 0.4s;
+}
+
+.line-footer .img-social i:hover {
+  transform: scale(1.3);
 }
 
 @media screen and (max-width: 1325px) {
@@ -541,14 +599,22 @@ section.hero-site {
     text-align: center;
   }
 
+  .hero-site .txt-hero p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 5rem 0 5rem;
+  }
+
   .hero-site .social-links {
-    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .hero-site .txt-imagem-hero img {
     display: none;
   }
-
   /* cardapio */
   .cardapio .card-sopa {
     flex: 1 1 calc(50% - 2rem); /* Cada card ocupa 50% da largura menos o espaçamento */
@@ -556,10 +622,7 @@ section.hero-site {
 
   /* sobre nos */
   .caixa-sobre .sobre-container {
-    width: 80vw;
-    height: 80vh;
-
-    padding: 5rem 5rem 1rem 5rem;
+    padding: 0 1rem 0 1rem;
   }
 
   .caixa-sobre .sobre-container .sobre-txt {
@@ -575,51 +638,72 @@ section.hero-site {
 @media screen and (max-width: 650px) {
   /* hero */
   .hero-site .txt-hero h1 {
-    font-size: 18vw;
+    font-size: 20vw;
   }
 
   .hero-site .txt-hero p {
+    display: flex;
+    text-align: center;
     font-size: 1.5em;
-    margin: 30px 20vw;
+    font-weight: 200;
+  }
+
+  /* cardapio */
+  .cardapio {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+  }
+
+  .cardapio .txt-cardapio h2 {
+    font-size: 4rem;
+  }
+
+  .cardapio .cards-cardapio {
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .cardapio .card-sopa {
-    height: 20rem;
+    width: 100%;
+    height: auto;
   }
 
-  .content-card-sopa {
-    display: flex; /* Torna o contêiner flexível */
-    flex-direction: column; /* Organiza os itens em uma coluna */
-    justify-content: center;
-    padding: 0 0.8rem;
+  .content-card-sopa h3 {
+    font-size: 2.5rem;
   }
 
   .content-card-sopa p {
-    font-size: 1rem;
-    text-align: start;
+    font-size: 1.1rem;
   }
 
   /* sobre nos */
+
+  .caixa-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
   .titulo-sobre {
     font-size: 4rem;
   }
 
-  .caixa-sobre {
-    padding: 25px 0 0 0;
+  .caixa-sobre .sobre-container .sobre-img img {
+    width: 90vw;
   }
-  .caixa-sobre .sobre-container {
-    width: 100vw;
-    height: 100vh;
-    padding: 0 0 0 0;
-  }
-
   .caixa-sobre .sobre-container .sobre-txt {
-    padding: 2rem 2rem 0 2rem;
+    padding: 0;
   }
-
   .caixa-sobre .sobre-container .sobre-txt p {
-    font-size: 1.5rem;
-    text-align: justify;
-    line-height: 1.4;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffff;
+    line-height: 1.8;
+    padding: 0 0 1rem 0;
   }
 }

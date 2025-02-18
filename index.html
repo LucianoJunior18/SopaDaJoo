@@ -26,7 +26,7 @@
                 </a>
             </div>
 
-            <nav class="menu-desktop">
+            <nav class="menu-desktop" id="menu-desktop">
                 <a href="#">Inicio</a>
                 <a href="#cardapio">Cardapio</a>
                 <a href="#caixa-sobre">Sobre</a>
@@ -56,16 +56,18 @@
                     alma.
                 </p>
 
-                <a href="#" class="btn-contato"><button>Comprar</button></a>
 
                 <div class="social-links">
-                    <a href="https://wa.me/SEU_NUMERO" target="_blank">
-                        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+
+                    <a href="#" class="btn-contato"><button>Comprar</button></a>
+                    <a class="img-social" href="https://wa.me/SEU_NUMERO" target="_blank">
+                        <i class='bx bxl-whatsapp'></i>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
-                            alt="Instagram">
+                    <a class="img-social" href="https://www.instagram.com/" target="_blank">
+                        <i class='bx bxl-instagram-alt'></i>
                     </a>
+
+
                 </div>
 
             </div>
@@ -73,7 +75,10 @@
 
 
             <div class="txt-imagem-hero">
-                <img src="img/Post para Instagram Sopas e Caldos Restaurante .png" alt="">
+                <div class="txt-imagem">
+                    <img src="img/Post para Instagram Sopas e Caldos Restaurante .png" alt="">
+                </div>
+
             </div>
 
 
@@ -84,21 +89,19 @@
     </section>
 
 
-    <section class="cardapio" id="cardapio">
+    <section class="cardapio" id="cardapio" aria-labelledby="titulo-cardapio">
         <div class="interface">
             <div class="txt-cardapio">
-                <h2>Cardapio</h2>
+                <h2 id="titulo-cardapio">Cardápio</h2>
             </div>
 
             <div class="cards-cardapio">
                 <div class="card-sopa">
-                    <img src="img/img-cardapio-carne.jpg" alt="">
-
+                    <img src="img/img-cardapio-carne.jpg"
+                        alt="Prato de carne com batata, cenoura e mandioca, acompanhado de acém desfiado">
                     <div class="content-card-sopa">
                         <h3>Carne</h3>
-                        <p>Batata, cenoura e mandioca,
-                            Acém desfiado,
-                            Tempero da casa</p>
+                        <p>Batata, cenoura e mandioca, Acém desfiado, Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
                         </p>
@@ -106,13 +109,11 @@
                 </div>
 
                 <div class="card-sopa">
-                    <img src="img/img-cardapio-frango.jpg" alt="">
-
+                    <img src="img/img-cardapio-frango.jpg"
+                        alt="Prato de frango grelhado com batata, cenoura e mandioca">
                     <div class="content-card-sopa">
                         <h3>Frango</h3>
-                        <p>Batata, cenoura e mandioca,
-                            Frango grelhado,
-                            Tempero da casa</p>
+                        <p>Batata, cenoura e mandioca, Frango grelhado, Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
                         </p>
@@ -120,13 +121,10 @@
                 </div>
 
                 <div class="card-sopa">
-                    <img src="img/img-cardapio-bacon.jpg" alt="">
-
+                    <img src="img/img-cardapio-bacon.jpg" alt="Prato de bacon crocante com batata, cenoura e cebola">
                     <div class="content-card-sopa">
                         <h3>Bacon</h3>
-                        <p>Batata, cenoura e cebola,
-                            Bacon crocante,
-                            Tempero da casa</p>
+                        <p>Batata, cenoura e cebola, Bacon crocante, Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
                         </p>
@@ -134,47 +132,70 @@
                 </div>
 
                 <div class="card-sopa">
-                    <img src="img/vegetable-soup-topped-with-dried-barberry.jpg" alt="">
-
+                    <img src="img/vegetable-soup-topped-with-dried-barberry.jpg"
+                        alt="Prato de calabresa com legumes e tempero da casa">
                     <div class="content-card-sopa">
                         <h3>Calabresa</h3>
-                        <p>Legumes,Calabresa,Tempero da casa</p>
+                        <p>Legumes, Calabresa, Tempero da casa</p>
                         <p class="price">
                             <strong>R$15</strong>
                         </p>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
     </section>
+
 
 
 
     <section class="caixa-sobre" id="caixa-sobre">
-        <h2 class="titulo-sobre"><span>Sobre</span> Nós</h2>
-        <div class="sobre-container">
-            <div class="sobre-img">
-                <img src="img/cozinheira.webp" alt="cafe">
-            </div>
+        <div class="interface">
+            <h2 class="titulo-sobre"><span>Sobre</span> Nós</h2>
+            <div class="sobre-container">
+                <div class="sobre-img">
+                    <img src="img/cozinheira.webp" alt="cafe">
+                </div>
 
-            <div class="sobre-txt">
-                <h3>Sopa Da <span>Jó</span></h3>
-                <p>Onde cada prato é preparado com amor, tradição e aquele toque especial
-                    que
-                    só Jo sabe dar. Nosso restaurante nasceu do desejo de trazer para a sua mesa o conforto de uma
-                    boa
-                    sopa, como aquelas feitas pelas mãos carinhosas de uma avó ou por um amigo querido em um dia
-                    frio. ❤️</p>
-                <a class="btn-contato" href="#"><Button>Saiba Mais</Button></a>
+                <div class="sobre-txt">
+                    <h3>Sopa Da <span>Jó</span></h3>
+                    <p>Onde cada prato é preparado com amor, tradição e aquele toque especial
+                        que
+                        só Jo sabe dar. Nosso restaurante nasceu do desejo de trazer para a sua mesa o conforto de uma
+                        boa
+                        sopa, como aquelas feitas pelas mãos carinhosas de uma avó ou por um amigo querido em um dia
+                        frio. ❤️</p>
+                    <a class="btn-contato" href="#"><Button>Saiba Mais</Button></a>
+                </div>
             </div>
         </div>
+
     </section>
 
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="logo-footer">
+                    <a href="#">
+                        <img class="logo-amarela" src="img/Logo-amarela.png" alt="Logo">
+                </div>
+                <div class="btn-social">
+                    <a class="img-social" href="https://wa.me/SEU_NUMERO" target="_blank">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                    <a class="img-social" href="https://www.instagram.com/" target="_blank">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                </div>
 
+            </div>
+
+            <div class="line-footer-borda borda">
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:contato@bruno.com.br">Sopadajo@email.com</a>
+                </p>
+            </div><!--line-footer-->
+        </div>
+    </footer>
 
     <div class="modal">
         <h3 class="titulo"><span>Nosso</span> Endereço</h3>
