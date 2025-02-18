@@ -642,13 +642,13 @@ footer .line-footer-borda p a {
 @media screen and (max-width: 650px) {
   /* hero */
   .hero-site .txt-hero h1 {
-    font-size: 20vw;
+    font-size: 18vw;
   }
 
   .hero-site .txt-hero p {
     display: flex;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-weight: 200;
   }
 
@@ -668,7 +668,7 @@ footer .line-footer-borda p a {
   .cardapio .cards-cardapio {
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .cardapio .card-sopa {
@@ -694,7 +694,7 @@ footer .line-footer-borda p a {
   }
 
   .titulo-sobre {
-    font-size: 4rem;
+    font-size: 3.1rem;
   }
 
   .caixa-sobre .sobre-container .sobre-img img {
