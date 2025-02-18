@@ -606,7 +606,7 @@ footer .line-footer-borda p a {
   .hero-site .txt-hero p {
     text-align: center;
     font-size: 1.8rem;
-    padding: 0 3.4rem 0 3.4rem;
+    padding: 0 4.5rem 0 4.5rem;
   }
 
   .hero-site .social-links {
@@ -642,13 +642,13 @@ footer .line-footer-borda p a {
 @media screen and (max-width: 650px) {
   /* hero */
   .hero-site .txt-hero h1 {
-    font-size: 18vw;
+    font-size: 15vw;
   }
 
   .hero-site .txt-hero p {
     display: flex;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 200;
   }
 
