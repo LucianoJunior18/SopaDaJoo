@@ -605,32 +605,32 @@ footer .line-footer-borda p a {
 
   .hero-site .txt-hero p {
     text-align: center;
-    font-size: 1.5rem;
-    padding: 0 5rem 0 5rem;
+    font-size: 1.8rem;
+    padding: 0 3.4rem 0 3.4rem;
   }
 
   .hero-site .social-links {
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
   }
 
   .hero-site .txt-imagem-hero img {
     display: none;
   }
-  /* cardapio */
-  .cardapio .card-sopa {
-    flex: 1 1 calc(50% - 2rem); /* Cada card ocupa 50% da largura menos o espaçamento */
+  /* sobre */
+  .caixa-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
   }
 
-  /* sobre nos */
+  .caixa-sobre .sobre-container .sobre-img img {
+    width: 60vw;
+  }
+
   .caixa-sobre .sobre-container {
     padding: 0 1rem 0 1rem;
-  }
-
-  .caixa-sobre .sobre-container .sobre-txt {
-    text-align: center;
   }
 
   .caixa-sobre .sobre-container .sobre-txt p {
