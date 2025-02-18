@@ -124,7 +124,7 @@ header nav.menu-desktop.active a:hover {
 
 /*  */
 
-nav.active {
+.menu-desktop.active {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -136,8 +136,13 @@ nav.active {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   align-items: center;
+}
+
+.menu-desktop.active a {
+  margin: 60px 0 0 0;
+  font-size: 1.5rem;
 }
 
 /* Estilo do menu dinamico */
@@ -236,7 +241,7 @@ section.hero-site {
 }
 
 .hero-site .txt-hero p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: left;
   margin-bottom: 20px;
   border: transparent;
@@ -327,7 +332,6 @@ section.hero-site {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  padding: 2rem;
   position: relative;
   z-index: 1;
 }
@@ -473,7 +477,7 @@ section.hero-site {
   z-index: 4;
   position: fixed;
   top: 50%;
-  left: -80%;
+  left: -100%;
   transform: translate(-50%, -50%);
   transition: left 0.5s linear;
 }
@@ -607,8 +611,8 @@ footer .line-footer-borda p a {
 
   .hero-site .txt-hero p {
     text-align: center;
-    font-size: 1.8rem;
-    padding: 0 4.5rem 0 4.5rem;
+    font-size: 2rem;
+    padding: 0 6rem 0 6rem;
   }
 
   .hero-site .social-links {
@@ -644,14 +648,14 @@ footer .line-footer-borda p a {
 @media screen and (max-width: 650px) {
   /* hero */
   .hero-site .txt-hero h1 {
-    font-size: 5vw;
+    font-size: 15vw;
   }
 
   .hero-site .txt-hero p {
     display: flex;
-    text-align: center;
-    font-size: 1em;
+    font-size: 20px;
     font-weight: 200;
+    padding: 0 6rem 0 6rem;
   }
 
   /* cardapio */
@@ -711,5 +715,22 @@ footer .line-footer-borda p a {
     color: #ffff;
     line-height: 1.8;
     padding: 0 0 1rem 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header .logo a img {
+    width: 60px;
+    height: 60px;
+  }
+
+  header.rolar img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hero-site .txt-hero p {
+    display: flex;
+    padding: 0 9rem 0 9rem;
   }
 }
