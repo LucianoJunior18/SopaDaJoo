@@ -78,21 +78,16 @@ header a {
 }
 
 header nav.menu-desktop {
-  list-style: none;
   display: flex;
 }
 
-header nav.menu-desktop {
-  display: inline-block;
-  color: #ffc400;
-}
-
 header nav.menu-desktop a {
+  text-align: center;
   text-decoration: none;
   text-align: center;
   color: #ffffff;
   padding: 0 20px;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 header nav.menu-desktop a:hover {
@@ -109,14 +104,23 @@ header nav.menu-desktop.active a:hover {
 #menu-icon {
   font-size: 4rem;
   display: none;
-  color: #ffffff;
+  color: #ffc400;
   z-index: 999;
   cursor: pointer;
 }
 
 #menu-icon:hover {
-  color: #ffc400;
+  color: #020201;
 }
+
+.rolar #menu-icon {
+  color: rgb(255, 255, 255);
+}
+
+.rolar #menu-icon:hover {
+  color: rgb(0, 0, 0);
+}
+
 /*  */
 
 nav.active {
