@@ -8,6 +8,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+.btn-mobile {
+  display: none;
 }
 
 body {
@@ -23,7 +28,7 @@ body {
 .btn-contato button {
   padding: 10px 40px;
   background-color: #ffc400;
-  border: none;
+  border: 0.2rem solid #ffc400;
   border-radius: 500px;
   font-size: 20px;
   color: rgb(0, 0, 0);
@@ -34,7 +39,7 @@ body {
 }
 
 .btn-contato button:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: transparent;
   color: #ffc400;
   transform: scale(1.1);
 }
@@ -71,25 +76,63 @@ header a {
   transition: 0.4s;
 }
 
-header nav.menu-desktop ul {
+header nav.menu-desktop {
   list-style: none;
+  display: flex;
 }
 
-header nav.menu-desktop ul li {
+header nav.menu-desktop {
   display: inline-block;
   color: #ffc400;
 }
 
-header nav.menu-desktop ul li a {
+header nav.menu-desktop a {
   text-decoration: none;
+  text-align: center;
   color: #ffffff;
-  padding: 0 40px;
-  font-size: 21px;
+  padding: 0 20px;
+  font-size: 20px;
 }
 
-header nav.menu-desktop ul li a:hover {
+header nav.menu-desktop a:hover {
   color: #ffc400;
   transform: scale(1.2);
+}
+
+header nav.menu-desktop.active a:hover {
+  color: #ffc400;
+  transform: scale(1);
+}
+
+/* Estilo do menu mobile */
+#menu-icon {
+  font-size: 4rem;
+  display: none;
+  color: #ffffff;
+  z-index: 999;
+  cursor: pointer;
+}
+
+#menu-icon:hover {
+  color: #ffc400;
+}
+/*  */
+
+nav.active {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  top: 0%;
+  left: 0;
+  height: 100vh;
+  animation: appearField 1s;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  align-items: center;
+  animation: fade 1s;
 }
 
 /* Estilo do menu dinamico */
@@ -108,12 +151,20 @@ header.rolar {
   box-shadow: 0 0 8px #000000;
 }
 
-header.rolar .menu-desktop ul li a {
+header.rolar .menu-desktop a {
   color: #000;
 }
 
-header.rolar .menu-desktop ul li a:hover {
+header.rolar .menu-desktop.active a {
+  color: #ffffff;
+}
+
+header.rolar .menu-desktop a:hover {
   color: #000;
+}
+
+header.rolar .menu-desktop.active a:hover {
+  color: #ffc400;
 }
 
 header.rolar .btn-contato button {
@@ -137,12 +188,13 @@ header.rolar .logo .logo-preta {
 /*Estilo do hero   */
 
 section.hero-site {
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)),
     url("img/top-view-vegetable-soup-with-seasonings-dark-green-background-ingredient-soup-meal-food-vegetable.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover, 100% 100%;
-  background-position: center, center;
+  background-size: cover;
+  position: relative; /* Adicionei o position: relative */
   color: white;
 }
 
@@ -150,6 +202,7 @@ section.hero-site {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 100%;
 }
 
@@ -318,75 +371,69 @@ section.hero-site {
   font-size: 2.2rem;
 }
 
-.titulo-sobre {
-  color: #ffc400;
-  font-family: "Funnel Display", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 4rem;
-  padding-bottom: 1.5rem;
-}
-
+/* sobre nos */
 .caixa-sobre {
-  padding: 12rem;
-  height: 100%;
-  background-color: #7e7e7e;
-  justify-content: center;
-  font-family: sans-serif;
+  width: 100%; /* A largura ocupa 100% da largura da viewport */
+  min-height: 80%;
+  padding: 5rem 5rem 1rem 5rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.575), rgb(0, 0, 0)),
     url("img/top-view-delicious-vegetable-soup-with-different-seasonings-dark-green-surface-food-vegetable-ingredients-soup-product-meal.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; /* Adicionei o position: relative */
+  background-position: center; /* A imagem está centralizada */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-size: cover; /* Garante que a imagem cubra toda a área */
+  position: relative; /* Necessário para usar posicionamento absoluto em elementos internos */
+}
+
+.titulo-sobre {
+  text-align: center;
+  color: #ffc400;
+  font-family: "Funnel Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  padding-bottom: 2rem;
 }
 
 .caixa-sobre .sobre-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #131313d0;
   gap: 1.5rem;
+  flex-wrap: wrap-reverse;
+  width: 80vw;
+  margin: auto;
+  padding: 2rem 5rem 1rem 5rem;
 }
 
 .caixa-sobre .sobre-container .sobre-img {
-  flex: 1 1 45rem;
+  flex: 1 1 1;
+  align-items: center;
 }
 
 .caixa-sobre .sobre-container .sobre-img img {
-  width: 500px;
-  border-radius: 50px;
+  width: 100%;
 }
 
-.caixa-sobre .sobre-container .sobre.txt {
-  flex: 1 1 45rem;
+.caixa-sobre .sobre-container .sobre-txt {
+  flex: 1 1 20rem;
   padding: 2rem;
+}
+
+.caixa-sobre .sobre-container .sobre-txt h3 {
+  font-size: 3rem;
+  color: #ffff;
+}
+
+.caixa-sobre .sobre-container .sobre-txt h3 span {
+  color: #ffc400;
 }
 
 .caixa-sobre .sobre-container .sobre-txt p {
   font-size: 1.5rem;
   font-weight: lighter;
   color: #ffff;
-  line-height: 1.5;
+  line-height: 1.8;
   padding: 1rem 0;
-  margin-bottom: 20px;
-}
-
-.sobre-link {
-  padding: 10px 40px;
-  background-color: #ffc400;
-  border: none;
-  border-radius: 500px;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  transition: 0.4s;
-  position: relative;
-  z-index: 1; /* O conteúdo fica acima da camada preta */
-}
-
-.sobre-link:hover {
-  background-color: rgb(0, 0, 0);
-  color: #ffc400;
-  transform: scale(1.1);
 }
 
 .modal {
@@ -394,24 +441,27 @@ section.hero-site {
   flex-direction: column;
   background-color: transparent;
   gap: 20px;
-  position: fixed;
   z-index: 4;
+  position: fixed;
   top: 50%;
   left: -80%;
   transform: translate(-50%, -50%);
   transition: left 0.5s linear;
 }
 
-.modal .titulo {
-  color: #ffffff;
-  font-size: 3rem;
-  font-family: "Funnel Display", sans-serif;
-  text-align: center;
-  padding: 20px;
-}
-
-.modal .titulo span {
-  color: #ffc400;
+.mascara2 {
+  visibility: hidden;
+  z-index: 3;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
 }
 
 .mascara {
@@ -427,4 +477,148 @@ section.hero-site {
     rgba(10, 12, 16, 0.932) 50%,
     rgba(10, 12, 16, 0.99) 85%
   );
+}
+
+@media screen and (max-width: 1325px) {
+  /* ESTILO CARDAPIO */
+  .cardapio {
+    padding: 4rem 2rem; /* Ajusta o padding para telas menores */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  .cardapio .cards-cardapio {
+    padding: 0rem;
+  }
+
+  .cardapio .card-sopa {
+    max-width: 90%;
+    width: 40vw;
+    height: auto;
+  }
+}
+
+/* Media queries para telas menores */
+@media screen and (max-width: 888px) {
+  /* cardapio */
+  body,
+  html {
+    box-sizing: border-box;
+  }
+
+  header button {
+    display: none;
+  }
+
+  /* Estilo Cabeçalho */
+  header {
+    padding: 10px 4%;
+    background-color: #0000003a;
+    width: 100%;
+  }
+
+  header nav.menu-desktop.active a:hover {
+    color: #ffc400;
+    transform: scale(1);
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav.active a {
+    display: block;
+    margin: 4rem 0;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  /*Estilo do hero   */
+  section.hero-site {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-site .social-links {
+    gap: 0.5rem;
+  }
+
+  .hero-site .txt-imagem-hero img {
+    display: none;
+  }
+
+  /* cardapio */
+  .cardapio .card-sopa {
+    flex: 1 1 calc(50% - 2rem); /* Cada card ocupa 50% da largura menos o espaçamento */
+  }
+
+  /* sobre nos */
+  .caixa-sobre .sobre-container {
+    width: 80vw;
+    height: 80vh;
+
+    padding: 5rem 5rem 1rem 5rem;
+  }
+
+  .caixa-sobre .sobre-container .sobre-txt {
+    text-align: center;
+  }
+
+  .caixa-sobre .sobre-container .sobre-txt p {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* hero */
+  .hero-site .txt-hero h1 {
+    font-size: 18vw;
+  }
+
+  .hero-site .txt-hero p {
+    font-size: 1.5em;
+    margin: 30px 20vw;
+  }
+
+  .cardapio .card-sopa {
+    height: 20rem;
+  }
+
+  .content-card-sopa {
+    display: flex; /* Torna o contêiner flexível */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    justify-content: center;
+    padding: 0 0.8rem;
+  }
+
+  .content-card-sopa p {
+    font-size: 1rem;
+    text-align: start;
+  }
+
+  /* sobre nos */
+  .titulo-sobre {
+    font-size: 3.5rem;
+  }
+
+  .caixa-sobre {
+    padding: 25px 0 0 0;
+  }
+  .caixa-sobre .sobre-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 0 0 0;
+  }
+
+  .caixa-sobre .sobre-container .sobre-txt {
+    padding: 2rem;
+  }
+
+  .caixa-sobre .sobre-container .sobre-txt p {
+    font-size: 1.4rem;
+    text-align: justify;
+    line-height: 1.4;
+  }
 }

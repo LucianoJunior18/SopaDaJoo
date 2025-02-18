@@ -1,4 +1,14 @@
 let navBar = document.querySelector("#header");
+const modal = document.querySelector(".modal");
+const mascara = document.querySelector(".mascara");
+let menuIcon = document.querySelector("#menu-icon");
+let navBarMenu = document.querySelector(".menu-desktop");
+
+// abrir ou fechar o menu ao clicar no icone
+menuIcon.addEventListener("click", () => {
+  menuIcon.classList.toggle("bx-x");
+  navBarMenu.classList.toggle("active");
+});
 
 document.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
@@ -9,9 +19,6 @@ document.addEventListener("scroll", () => {
     navBar.classList.remove("rolar");
   }
 });
-
-const modal = document.querySelector(".modal");
-const mascara = document.querySelector(".mascara");
 
 function mostrarModal() {
   modal.style.left = "50%";
